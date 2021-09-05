@@ -1,0 +1,6 @@
+const SubmitDataType={
+    SUBMIT_ALL_DATA_START:'SUBMIT_ALL_DATA_START',
+    SUBMIT_ALL_DATA_INPROGRESS:'SUBMIT_ALL_DATA_INPROGRESS',
+}
+
+export default SubmitDataType;

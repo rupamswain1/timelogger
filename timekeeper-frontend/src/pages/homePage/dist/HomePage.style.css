@@ -1,0 +1,76 @@
+.mainContainerHomePage {
+  display: flexbox;
+  position: absolute;
+  background-color: #090d3d;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://source.unsplash.com/1600x900/?clock");
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+.mainContainerHomePage .openNotes {
+  position: relative;
+  float: right;
+  top: -6%;
+}
+.mainContainerHomePage .totalTimeContainer {
+  display: flex;
+  width: 100%;
+  margin-bottom: 1vh;
+  margin-top: 1vh;
+  height: 15%;
+  margin-bottom: 4vh;
+}
+.mainContainerHomePage .switchButtonsContainer {
+  display: flex;
+  margin-top: 3vh;
+  width: 100%;
+  margin-bottom: 4vh;
+}
+.mainContainerHomePage .taskListContainer {
+  display: flex;
+  margin-top: 3vh;
+  width: 100%;
+}
+.mainContainerHomePage .taskListContainer .remainderMain {
+  position: relative;
+  left: 20vw;
+}
+.mainContainerHomePage .reportButtonContainer {
+  display: flex;
+  width: 100%;
+  margin-bottom: 4%;
+  margin-top: 4%;
+}
+.mainContainerHomePage .reportButtonContainer .finishDayBtn {
+  position: relative;
+  width: 40%;
+  left: 30%;
+  height: 140%;
+  font-weight: bold;
+  font-size: 150%;
+  box-shadow: -2px 16px 15px #646262;
+}
+.mainContainerHomePage .reportButtonContainer .finishDayBtn:active {
+  box-shadow: 0px 0px 0px #646262;
+}
+.mainContainerHomePage .graphsContainer {
+  display: block;
+  width: 100%;
+  margin-top: 2%;
+  padding-bottom: 5%;
+}
+.mainContainerHomePage .graphsContainer .chartConatiner1 {
+  display: flex;
+  position: relative;
+}
+.mainContainerHomePage .graphsContainer .chartContainer2 {
+  display: flex;
+  position: absolute;
+  width: 100%;
+}
+.mainContainerHomePage .graphsContainer .chartHeader {
+  font-weight: bold;
+  font-size: 150%;
+  position: relative;
+  left: 45%;
+}

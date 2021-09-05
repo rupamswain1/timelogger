@@ -1,0 +1,52 @@
+.notesContanerMain{
+    position: absolute;
+    display: block;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    width:1010%;
+    right: 65%;
+    height: 400%;
+    background-color: rgba(35, 168, 220, 0.8);
+    z-index: 2;
+    .notesInput{
+        position: relative;
+        top: 5%;
+        align-items: center;
+        .noteInputs{
+            position: relative;
+            width: 60%;
+            left:10%;
+            background-color: rgb(159, 201, 250);
+            border-top-left-radius: 5px;
+            border-bottom-left-radius:5px;
+            outline: none;
+        }
+        ::placeholder{
+            color: rgb(10, 8, 8);
+            font-weight: bold;
+        }
+        button[class^='addNoteBtn']{
+            position: relative;
+            width: 20%;
+            left:10%;
+            background-color:  rgb(9, 79, 158);
+            color: white;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        button[class*='disabled']{
+            background-color: grey;
+        }
+    }
+    .notesCollection{
+        position: relative;
+        width:95%;
+        height: 75%;
+        border-style: solid;
+        top:8%;
+        border-width: 1px;
+        left:2%;
+        border-radius: 5px;
+    }
+}

@@ -1,0 +1,93 @@
+.toDoMainContainer{
+    position: relative;
+    border-width: 1px;
+    border-style: solid;;
+    width: 30%;
+    border-radius: 15px;
+    left:2%;
+    top:10%;
+    min-height: 0vh;
+    box-shadow: -2px 16px 15px rgb(3, 31, 107);
+    background-color: rgba(102, 183, 238,0.6);
+    display: block;
+   
+   .headingToDo{
+        position: relative;
+        left:38%;
+        //border-style: groove;
+        border-radius: 5px;
+        top:2%;
+        padding-left: 3%;
+        padding-right: 3%;
+        background-color: rgb(105, 243, 162);
+        font-weight: bold;
+        text-decoration: underline;
+        font-size: 120%;
+    }
+   .addIconButton{
+       position: relative;
+       left:85%;
+       bottom:-75%;
+   }
+   .addTaskinpputContainer{
+       position: relative;
+       top:3%;
+       //left:10vw;
+       display: block;
+      left: 4vw;
+       
+       width:100%;
+       display: flex;
+     
+       .addTaskContainer{
+           position: relative;
+           display: flex;
+           width:100%;
+        .addTaskText{
+            position: relative;
+            //box-shadow: -2px 16px 15px rgb(100, 98, 98);
+            right:11%;
+            width: 78%;
+            background-color: rgb(179, 234, 241);
+            border-radius: 10px;
+            outline: none;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+            color: black;
+            font-size: 100%;
+           
+            
+        }
+        ::placeholder{
+            color: rgb(20, 5, 85);
+            font-weight:bold;
+        }
+        button[class*=saveTaskBtn]{
+            right:11%;
+            border-radius: 10px;
+            border-top-left-radius:0px ;
+            border-bottom-left-radius: 0px;
+            //box-shadow: -2px 16px 15px rgb(100, 98, 98);
+         }
+         button[class*='disabled']{
+            color: grey;
+         }
+       }
+       
+            
+   }
+   .addedTaskListContainer{
+        border-style: solid;
+        display: block;
+        position: relative;
+        width:95%;
+        top:5%;
+        left: 2%;
+        height: 75%;
+        border-radius: 10px;
+        border-width: 1px;
+        overflow-x: scroll;
+        overflow-x: hidden;
+       
+    }
+}

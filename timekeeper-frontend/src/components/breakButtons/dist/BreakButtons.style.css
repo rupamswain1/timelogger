@@ -1,0 +1,59 @@
+.breakbuttonsMainContainer {
+  position: relative;
+  left: 20vw;
+}
+.breakbuttonsMainContainer button[class^=brakButton] {
+  position: relative;
+  height: 10vh;
+  border-radius: 4px;
+  width: 5vw;
+  box-shadow: 0px 12px 10px #06308a;
+  z-index: 1;
+  margin-left: 0.25vw;
+  transition: all 0.2s ease-in;
+}
+.breakbuttonsMainContainer button[class^=brakButton]:hover {
+  transform: scale(1.3);
+  z-index: 2;
+}
+.breakbuttonsMainContainer button[class*=active] {
+  box-shadow: 0px 0px 0px #888888;
+}
+.breakbuttonsMainContainer button[class*=insta] {
+  background-color: rgba(243, 9, 192, 0.6);
+}
+.breakbuttonsMainContainer button[class*=fb] {
+  background-color: rgba(10, 79, 158, 0.6);
+}
+.breakbuttonsMainContainer button[class*=youtube] {
+  background-color: rgba(192, 9, 9, 0.6);
+}
+.breakbuttonsMainContainer button[class*=calls] {
+  background-color: rgba(109, 75, 204, 0.6);
+}
+.breakbuttonsMainContainer button[class*=messaging] {
+  background-color: rgba(43, 192, 43, 0.6);
+}
+.breakbuttonsMainContainer button[class*=sleep] {
+  background-color: rgba(36, 109, 128, 0.6);
+}
+.breakbuttonsMainContainer button[class*=excesise] {
+  background-color: rgba(13, 121, 94, 0.6);
+}
+.breakbuttonsMainContainer button[class*=tea] {
+  background-color: rgba(102, 50, 7, 0.6);
+}
+.breakbuttonsMainContainer button[class*=food] {
+  background-color: rgba(48, 197, 185, 0.6);
+}
+.breakbuttonsMainContainer button[class*=eject] {
+  background-color: rgba(48, 1, 1, 0.6);
+}
+.breakbuttonsMainContainer button[class*=misc] {
+  background-color: rgba(115, 20, 223, 0.6);
+}
+.breakbuttonsMainContainer button[class*=active] {
+  box-shadow: 0px 0px 5px #777;
+  z-index: 0;
+  border-color: #0e0000;
+}

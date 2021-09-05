@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/timelogger/static/css/main.81900641.chunk.css",
+    "main.js": "/timelogger/static/js/main.ec23dc8f.chunk.js",
+    "main.js.map": "/timelogger/static/js/main.ec23dc8f.chunk.js.map",
+    "runtime-main.js": "/timelogger/static/js/runtime-main.be6a9263.js",
+    "runtime-main.js.map": "/timelogger/static/js/runtime-main.be6a9263.js.map",
+    "static/css/2.61061fbe.chunk.css": "/timelogger/static/css/2.61061fbe.chunk.css",
+    "static/js/2.9b97f1b4.chunk.js": "/timelogger/static/js/2.9b97f1b4.chunk.js",
+    "static/js/2.9b97f1b4.chunk.js.map": "/timelogger/static/js/2.9b97f1b4.chunk.js.map",
+    "static/js/3.4f070355.chunk.js": "/timelogger/static/js/3.4f070355.chunk.js",
+    "static/js/3.4f070355.chunk.js.map": "/timelogger/static/js/3.4f070355.chunk.js.map",
+    "index.html": "/timelogger/index.html",
+    "precache-manifest.af08e14e4d8820b43829b457dae7d003.js": "/timelogger/precache-manifest.af08e14e4d8820b43829b457dae7d003.js",
+    "service-worker.js": "/timelogger/service-worker.js",
+    "static/css/2.61061fbe.chunk.css.map": "/timelogger/static/css/2.61061fbe.chunk.css.map",
+    "static/css/main.81900641.chunk.css.map": "/timelogger/static/css/main.81900641.chunk.css.map",
+    "static/js/2.9b97f1b4.chunk.js.LICENSE.txt": "/timelogger/static/js/2.9b97f1b4.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.be6a9263.js",
+    "static/css/2.61061fbe.chunk.css",
+    "static/js/2.9b97f1b4.chunk.js",
+    "static/css/main.81900641.chunk.css",
+    "static/js/main.ec23dc8f.chunk.js"
+  ]
+}

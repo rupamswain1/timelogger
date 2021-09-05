@@ -1,0 +1,107 @@
+.remainderMainContainer {
+  position: relative;
+  border-width: 1px;
+  border-style: solid;
+  width: 30%;
+  border-radius: 15px;
+  left: 5%;
+  top: 0%;
+  min-height: 0vh;
+  box-shadow: -2px 16px 15px #031f6b;
+  background-color: rgba(102, 183, 238, 0.6);
+  display: block;
+}
+.remainderMainContainer .headingremainder {
+  position: relative;
+  left: 34%;
+  border-radius: 5px;
+  top: 2%;
+  padding-left: -3%;
+  padding-right: 3%;
+  background-color: #69f3a2;
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 120%;
+}
+.remainderMainContainer .addIconButton {
+  position: relative;
+  left: 85%;
+  bottom: -75%;
+}
+.remainderMainContainer .addRemainderinpputContainer {
+  position: relative;
+  top: 3%;
+  display: block;
+  left: 4vw;
+  width: 100%;
+  display: flex;
+}
+.remainderMainContainer .addRemainderinpputContainer .addRemainderContainer {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.remainderMainContainer .addRemainderinpputContainer .addRemainderContainer .remainderAddInputs {
+  display: inline-flex;
+  position: relative;
+  right: 5%;
+}
+.remainderMainContainer .addRemainderinpputContainer .addRemainderContainer .remainderAddInputs .addRemainderText {
+  position: relative;
+  width: 58%;
+  background-color: #b3eaf1;
+  border-radius: 10px;
+  outline: none;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  color: black;
+  font-size: 100%;
+}
+.remainderMainContainer .addRemainderinpputContainer .addRemainderContainer .remainderAddInputs .timeSelector {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 15%;
+  background-color: #1cabd6;
+  text-decoration: none;
+}
+.remainderMainContainer .addRemainderinpputContainer .addRemainderContainer ::placeholder {
+  color: #140555;
+  font-weight: bold;
+}
+.remainderMainContainer .addRemainderinpputContainer .addRemainderContainer .minutesFromNowContainer {
+  display: block;
+}
+.remainderMainContainer .addRemainderinpputContainer .addRemainderContainer .minutesFromNowContainer .repeatSelectCheckBox {
+  position: relative;
+  right: 8%;
+}
+.remainderMainContainer .addRemainderinpputContainer .addRemainderContainer .minutesFromNowContainer .minutesFromNow {
+  font-size: 80%;
+  position: relative;
+  margin-left: -2%;
+  right: 8%;
+  color: white;
+}
+.remainderMainContainer .addRemainderinpputContainer .addRemainderContainer .saveRemainderBtn {
+  right: 5%;
+  height: 3vh;
+}
+.remainderMainContainer .addRemainderinpputContainer .timeError {
+  color: crimson;
+  font-size: 80%;
+  position: relative;
+  top: -15%;
+}
+.remainderMainContainer .addedRemainderListContainer {
+  border-style: solid;
+  display: block;
+  position: relative;
+  width: 95%;
+  top: 1%;
+  left: 2%;
+  height: 63%;
+  border-radius: 10px;
+  border-width: 1px;
+  overflow-x: scroll;
+  overflow-x: hidden;
+}

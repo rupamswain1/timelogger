@@ -1,0 +1,100 @@
+.headerContainer {
+  background-color: rgba(20, 223, 13, 0);
+  width: 98%;
+  display: flex;
+  overflow: hidden;
+  padding: 0.2vw 1vw;
+}
+.headerContainer .logoContainer {
+  position: relative;
+  left: 40vw;
+}
+.headerContainer .logoContainer .logo {
+  padding: 0.3vw 0.3vw;
+  color: black;
+  text-align: center;
+  font-family: "Lobster", cursive;
+  font-size: 2.5vw;
+  border-style: double;
+  border-color: black;
+  border-radius: 10px;
+  display: inline-block;
+  background-image: linear-gradient(white, white);
+  background-position: 0 100%;
+  /*OR bottom left*/
+  background-size: 0% 1px;
+  width: 20vw;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s, background-position 0s 0.3s;
+  /*change after the size immediately*/
+  color: white;
+  background-color: #206ee4;
+}
+.headerContainer .logoContainer .logo:hover {
+  background-position: 100% 100%;
+  /*OR bottom right*/
+  background-size: 100% 2px;
+}
+.headerContainer .searchBoxContainer {
+  position: absolute;
+  left: 40%;
+  right: 40%;
+}
+.headerContainer .searchBoxContainer .searchBox {
+  color: black;
+  text-align: center;
+  padding: 12px 10px;
+}
+.headerContainer .optionContainer {
+  float: left;
+  position: absolute;
+  right: 1%;
+}
+.headerContainer .optionContainer .option {
+  display: inline-block;
+  background-image: linear-gradient(white, white);
+  background-position: 0 100%;
+  /*OR bottom left*/
+  background-size: 0% 1px;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s, background-position 0s 0.3s;
+  /*change after the size immediately*/
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 0.75vw 0.75vw;
+  padding-bottom: 0.5vw;
+  font-size: 1.1vw;
+  position: relative;
+}
+.headerContainer .optionContainer .option:hover {
+  background-position: 100% 100%;
+  /*OR bottom right*/
+  background-size: 100% 2px;
+}
+.headerContainer .optionContainer .option:hover > .dropDown-content {
+  display: block;
+}
+.headerContainer .optionContainer .option .dropDown-content {
+  margin-top: 2vh;
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: 5vh;
+  left: -1vw;
+  border-radius: 5px;
+}
+.headerContainer .optionContainer .option .dropDown-content a {
+  color: black;
+  padding: 15px 16px;
+  text-decoration: none;
+  display: block;
+  border-radius: 5px;
+}
+.headerContainer .optionContainer .option .dropDown-content a:hover {
+  text-decoration: underline;
+  background-color: #7ef0b7;
+}

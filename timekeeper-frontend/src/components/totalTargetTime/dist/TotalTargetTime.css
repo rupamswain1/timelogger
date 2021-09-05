@@ -1,0 +1,58 @@
+.timcardsContainer {
+  position: relative;
+  display: flex;
+  left: 19vw;
+}
+.timcardsContainer .timeBoxNegative {
+  position: relative;
+  height: 100%;
+  font-size: 600%;
+  text-align: center;
+  color: #be1717;
+}
+.timcardsContainer .timeBox {
+  position: relative;
+  width: 8vw;
+  height: 100%;
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 1px;
+  margin-left: 5px;
+  box-shadow: 7px 5px 5px #04265a;
+  font-size: 600%;
+  text-align: center;
+  background-color: rgba(36, 118, 133, 0.5);
+  color: black;
+}
+.timcardsContainer ::placeholder {
+  color: white;
+}
+.timcardsContainer input[class*=-negative] {
+  position: relative;
+  width: 8vw;
+  height: 100%;
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 1px;
+  margin-left: 10px;
+  box-shadow: 7px 5px 5px #530202;
+  font-size: 600%;
+  text-align: center;
+  background-color: rgba(224, 64, 36, 0.9);
+  color: black;
+}
+.timcardsContainer .timerText {
+  position: relative;
+  font-size: 300%;
+  margin-left: 1%;
+  top: 50%;
+  color: white;
+}
+.timcardsContainer .saveTimeBtn {
+  position: relative;
+  width: 14vw;
+  height: 40%;
+  top: 8vh;
+  margin-left: 2vw;
+  font-weight: bold;
+}
