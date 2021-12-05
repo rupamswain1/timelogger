@@ -17,11 +17,11 @@ const NotesContainer=()=>{
         }
     }
     return(
-        noteDisplay?
-        <div className='notesContanerMain'>
-            <form onSubmit={handleSubmit} className='notesInput'>
+
+        <div className={`notesContanerMain ${noteDisplay?'notesContanerMain__expand':'notesContanerMain__shrink'}`}>
+            <form onSubmit={handleSubmit} className={`notesInput ${noteDisplay?'notesInput__expand':'notesInput__shrink'}`}>
                 <input value={noteEntered} type='text' placeholder='Add Note' className='noteInputs' onChange={e=>setNoteEntered(e.target.value)}></input>
-                <button className={`addNoteBtn-${noteEntered.length>0?'enabled':'disabled'}`} type="submit" disabled={noteEntered.length<=0}>Add</button>
+                <button className={`addNoteBtn-${noteEntered.length>0?'enabled':'disabled'} ${noteDisplay?'addNoteBtn__expand':'addNoteBtn__shrink'}`} type="submit" disabled={noteEntered.length<=0}>Add</button>
             </form>
             <div className='notesCollection'>
                 {Object.keys(notes).map((key)=>
@@ -35,7 +35,7 @@ const NotesContainer=()=>{
                
             </div>
         </div>
-        :''
+        
     )
 }
 

@@ -8,7 +8,8 @@
     
     .notesText{
         background-color: rgb(241, 172, 172);
-        width:98%;   
+        max-width:95%;
+        min-width: 95%;   
         //display: flex;
         word-wrap: break-word;
         height: auto;

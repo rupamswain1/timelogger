@@ -7,12 +7,28 @@
     width:1010%;
     right: 65%;
     height: 400%;
-    background-color: rgba(35, 168, 220, 0.8);
+    background-color: rgba(35, 168, 220, 0.8); 
     z-index: 2;
+    transition:all .2s;
+
+    &__shrink{
+      
+        height: 0;
+        width:0;
+       
+    }
+
+
     .notesInput{
         position: relative;
         top: 5%;
         align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        &__shrink{
+            display: none;
+            
+        }
         .noteInputs{
             position: relative;
             width: 60%;
@@ -34,10 +50,13 @@
             color: white;
             border-top-right-radius: 5px;
             border-bottom-right-radius: 5px;
+           
+            
         }
         button[class*='disabled']{
             background-color: grey;
         }
+       
     }
     .notesCollection{
         position: relative;
@@ -48,5 +67,7 @@
         border-width: 1px;
         left:2%;
         border-radius: 5px;
+        overflow-y: scroll;
+        overflow-x: hidden;
     }
 }
