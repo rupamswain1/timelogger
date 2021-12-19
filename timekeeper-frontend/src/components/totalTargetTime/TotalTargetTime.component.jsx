@@ -38,23 +38,27 @@ const TotalTargetTime=()=>{
     const handleChange=event=>{
             validatePrevValue();
             //timeArr.push(event.target.value)
+            if(!isNaN(event.target.value)){
             timeArr[parseInt(event.target.name)]=event.target.value
-            if(parseInt(event.target.name)<5){
-                document.getElementById(parseInt(event.target.name)+1).disabled=false;
-                document.getElementById(parseInt(event.target.name)+1).focus();
-                document.getElementById(parseInt(event.target.name)+1).value='';
-                if(parseInt(event.target.name)!==0){
-                document.getElementById(parseInt(event.target.name)).disabled=true;
+                if(parseInt(event.target.name)<5){
+                    document.getElementById(parseInt(event.target.name)+1).disabled=false;
+                    document.getElementById(parseInt(event.target.name)+1).focus();
+                    document.getElementById(parseInt(event.target.name)+1).value='';
+                    if(parseInt(event.target.name)!==0){
+                    document.getElementById(parseInt(event.target.name)).disabled=true;
+                    }
+                }
+                else{
+                    document.getElementById(parseInt(event.target.name)).blur();
+                    document.getElementById(parseInt(event.target.name)).disabled=true;
                 }
             }
-            else{
-                document.getElementById(parseInt(event.target.name)).blur();
-                document.getElementById(parseInt(event.target.name)).disabled=true;
-            }
+            else{document.getElementById(parseInt(event.target.name)).value='';}
             //console.log(timeArr)
            //console.log((parseInt(timeArr[0])*10+(parseInt(timeArr[1])))*60*60)    
     }
     const clearTxt=event=>{
+        if(!event.target.name==='submitButton')
         document.getElementById(parseInt(event.target.name)).value='';
     }
     const getFullDate=()=>{
@@ -65,12 +69,15 @@ const TotalTargetTime=()=>{
             return(date.toString()+month.toString()+year.toString());
     }
     const submitTime=()=>{
-        //console.log(timeArr)
-        setTimeState(timeArr)
-        const totalSeconds=ArrayToSeconds(timeArr);
-        //console.log(totalSeconds)
-        dispatch(saveTotalTime(totalSeconds))
-        
+        if(timeArr.length){
+            setTimeState(timeArr)
+            const totalSeconds=ArrayToSeconds(timeArr);
+            //console.log(totalSeconds)
+            dispatch(saveTotalTime(totalSeconds))
+        }
+        else{
+            console.log("time is blank");
+        }
            
         //newTime=totalTime[key][getFullDate()];
         //console.log(newTime)
@@ -83,29 +90,51 @@ const TotalTargetTime=()=>{
     if(timeState.length>0 && Object.keys(taskList).length>0){
         displayCondition=true;
     }
+    const handleDelete=(event)=>{
+        const pressedKey=event.key;
+        if (pressedKey==='Backspace' || pressedKey==='Delete'){
+            timeArr.pop();
+            //console.log(event.target.name);
+                if(parseInt(event.target.name)<=5){
+                    if(parseInt(event.target.name)<1){
+                        return false
+                    }
+                    document.getElementById(parseInt(event.target.name)-1).disabled=false;
+                    document.getElementById(parseInt(event.target.name)-1).focus();
+                    document.getElementById(parseInt(event.target.name)-1).value='';
+                    
+                }
+
+                // else{
+                //     document.getElementById(parseInt(event.target.name)).blur();
+                //     document.getElementById(parseInt(event.target.name)).disabled=true;
+                //}
+        }
+    }
     return(
-        <div className='timcardsContainer'>
+        <div className='timcardsContainer' onChange={handleChange} onFocus={clearTxt} onKeyDown={handleDelete}>
             {timeState.length>6?<span className='timeBoxNegative'>-</span>:''}
             
-            <input className={cls} placeholder='H' type='text' name='0' onFocus={clearTxt} id='0' value={(displayCondition)?timeState[0]:timeArr[0]} maxlength='1' onChange={handleChange}>
+            <input className={cls} placeholder='H' type='text' name='0'  id='0' value={(displayCondition)?timeState[0]:timeArr[0]} maxlength='1'>
             </input>
-            <input disabled className={cls} placeholder='H' type='text' name='1' onFocus={clearTxt} id='1' value={displayCondition?timeState[1]:timeArr[1]} maxlength='1' onChange={handleChange}>
+            <input disabled className={cls} placeholder='H' type='text' name='1' id='1' value={displayCondition?timeState[1]:timeArr[1]} maxlength='1'>
             </input>
             <div className='timerText'>H</div>
-            <input disabled className={cls} placeholder='M' type='text' name='2' onFocus={clearTxt} id='2' value={displayCondition?timeState[2]:timeArr[2]} maxlength='1' onChange={handleChange}>
+            <input disabled className={cls} placeholder='M' type='text' name='2' id='2' value={displayCondition?timeState[2]:timeArr[2]} maxlength='1'>
             </input>
-            <input disabled className={cls} placeholder='M' type='text' name='3' onFocus={clearTxt} id='3' value={displayCondition?timeState[3]:timeArr[3]} maxlength='1' onChange={handleChange}>
+            <input disabled className={cls} placeholder='M' type='text' name='3' id='3' value={displayCondition?timeState[3]:timeArr[3]} maxlength='1'>
             </input>
                 <div className='timerText'>M</div>
-                <input disabled className={cls} placeholder='S' type='text' name='4' onFocus={clearTxt} id='4' value={displayCondition?timeState[4]:timeArr[4]} maxlength='1' onChange={handleChange}>
+                <input disabled className={cls} placeholder='S' type='text' name='4' id='4' value={displayCondition?timeState[4]:timeArr[4]} maxlength='1'>
             </input>
-            <input disabled className={cls} placeholder='S' type='text' name='5' onFocus={clearTxt} id='5' onfocus='this.value=""' value={displayCondition?timeState[5]:timeArr[5]} maxlength='1' onChange={handleChange}>
+            <input disabled className={cls} placeholder='S' type='text' name='5' id='5' onfocus='this.value=""' value={displayCondition?timeState[5]:timeArr[5]} maxlength='1'>
             </input>
                 <div className='timerText'>S</div>
             {totalTime[key]?'':
             <Button
             variant="contained"
             color="primary"
+            name='submitButton'
             className='saveTimeBtn'
             startIcon={<CheckIcon />}
             onClick={()=>submitTime()}
