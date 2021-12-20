@@ -4,7 +4,10 @@ import Button from '@material-ui/core/Button';
 import CheckIcon from '@material-ui/icons/Check';
 import {saveTotalTime,updateCountDown} from '../../redux/totalTime/TotalTime.action';
 import {ArrayToSeconds,SecondsToArray} from '../../logic/arrayToSeconds';
+import TimeInput from '../timeInputComponent/timeInput.component';
 import './TotalTargetTime.scss' 
+
+
 const TotalTargetTime=()=>{
     const dispatch=useDispatch();
     const {key,totalTime}=useSelector(state=>state.TotalTimeReducer);
@@ -13,6 +16,7 @@ const TotalTargetTime=()=>{
     //console.log(timeState)
     let timeArr=[]
     //console.log(timeArr)
+   
     useEffect(() => {
         validatePrevValue();
         const interval = setInterval(() => {
@@ -36,6 +40,7 @@ const TotalTargetTime=()=>{
        
     }
     const handleChange=event=>{
+            
             validatePrevValue();
             //timeArr.push(event.target.value)
             if(!isNaN(event.target.value)){
@@ -111,25 +116,45 @@ const TotalTargetTime=()=>{
                 //}
         }
     }
+    const timeBoxes=[
+        {
+            id:0,
+            placeholder:'H',
+        },
+        {
+            id:1,
+            placeholder:'H',
+        },
+        {
+            id:2,
+            placeholder:'M',
+        },
+        {
+            id:3,
+            placeholder:'M',
+        },
+        {
+            id:4,
+            placeholder:'S',
+        },
+        {
+            id:5,
+            placeholder:'S',
+        },
+    ]
     return(
         <div className='timcardsContainer' onChange={handleChange} onFocus={clearTxt} onKeyDown={handleDelete}>
             {timeState.length>6?<span className='timeBoxNegative'>-</span>:''}
+            {timeBoxes.map((box)=>(
+                <TimeInput
+                    id={box.id}
+                    placeHolder={box.placeholder}
+                    cls={cls}
+                    value={(displayCondition)?timeState[box.id]:timeArr[box.id]}
+                />
+            ))}
+
             
-            <input className={cls} placeholder='H' type='text' name='0'  id='0' value={(displayCondition)?timeState[0]:timeArr[0]} maxlength='1'>
-            </input>
-            <input disabled className={cls} placeholder='H' type='text' name='1' id='1' value={displayCondition?timeState[1]:timeArr[1]} maxlength='1'>
-            </input>
-            <div className='timerText'>H</div>
-            <input disabled className={cls} placeholder='M' type='text' name='2' id='2' value={displayCondition?timeState[2]:timeArr[2]} maxlength='1'>
-            </input>
-            <input disabled className={cls} placeholder='M' type='text' name='3' id='3' value={displayCondition?timeState[3]:timeArr[3]} maxlength='1'>
-            </input>
-                <div className='timerText'>M</div>
-                <input disabled className={cls} placeholder='S' type='text' name='4' id='4' value={displayCondition?timeState[4]:timeArr[4]} maxlength='1'>
-            </input>
-            <input disabled className={cls} placeholder='S' type='text' name='5' id='5' onfocus='this.value=""' value={displayCondition?timeState[5]:timeArr[5]} maxlength='1'>
-            </input>
-                <div className='timerText'>S</div>
             {totalTime[key]?'':
             <Button
             variant="contained"
