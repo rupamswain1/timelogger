@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`expect to render the Time input component which is disabled 1`] = `ReactWrapper {}`;
+
+exports[`expect to render the Time input component which is not disabled 1`] = `ReactWrapper {}`;

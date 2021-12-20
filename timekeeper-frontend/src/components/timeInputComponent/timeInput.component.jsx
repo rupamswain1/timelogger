@@ -10,7 +10,7 @@ function TimeInput({id,placeHolder,value,cls}) {
             name={id}  
             id={id} 
             value={value} 
-            maxlength='1'
+            maxLength='1'
             disabled={id!==0?true:false}
         >
         </input>
