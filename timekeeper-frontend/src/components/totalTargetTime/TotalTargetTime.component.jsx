@@ -4,7 +4,7 @@ import Button from '@material-ui/core/Button';
 import CheckIcon from '@material-ui/icons/Check';
 import {saveTotalTime,updateCountDown} from '../../redux/totalTime/TotalTime.action';
 import {ArrayToSeconds,SecondsToArray} from '../../logic/arrayToSeconds';
-import TimeInput from '../timeInputComponent/timeInput.component';
+import TimeCard from '../timeCard/timeCard.component';
 import './TotalTargetTime.scss' 
 
 
@@ -143,32 +143,33 @@ const TotalTargetTime=()=>{
         },
     ]
     return(
-        <div className='timcardsContainer' onChange={handleChange} onFocus={clearTxt} onKeyDown={handleDelete}>
-            {timeState.length>6?<span className='timeBoxNegative'>-</span>:''}
-            {timeBoxes.map((box)=>(
-                <TimeInput
-                    id={box.id}
-                    placeHolder={box.placeholder}
-                    cls={cls}
-                    value={(displayCondition)?timeState[box.id]:timeArr[box.id]}
-                />
-            ))}
+        <TimeCard onChange={handleChange} onFocus={clearTxt} onKeyDown={handleDelete} timeState={timeState} timeBoxes={timeBoxes} cls={cls} displayCondition={displayCondition} timeArr={timeArr} totalTime={totalTime} key={key} submitTime={submitTime}/>
+        // <div className='timcardsContainer' onChange={handleChange} onFocus={clearTxt} onKeyDown={handleDelete}>
+        //     {timeState.length>6?<span className='timeBoxNegative'>-</span>:''}
+        //     {timeBoxes.map((box)=>(
+        //         <TimeInput
+        //             id={box.id}
+        //             placeHolder={box.placeholder}
+        //             cls={cls}
+        //             value={(displayCondition)?timeState[box.id]:timeArr[box.id]}
+        //         />
+        //     ))}
 
             
-            {totalTime[key]?'':
-            <Button
-            variant="contained"
-            color="primary"
-            name='submitButton'
-            className='saveTimeBtn'
-            startIcon={<CheckIcon />}
-            onClick={()=>submitTime()}
-            >
-                Save Time
-            </Button>
-            }
+        //     {totalTime[key]?'':
+        //     <Button
+        //     variant="contained"
+        //     color="primary"
+        //     name='submitButton'
+        //     className='saveTimeBtn'
+        //     startIcon={<CheckIcon />}
+        //     onClick={()=>submitTime()}
+        //     >
+        //         Save Time
+        //     </Button>
+        //     }
 
-        </div>
+        // </div>
 
     )
 }

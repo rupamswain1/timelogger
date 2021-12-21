@@ -1,6 +1,7 @@
 import React from 'react'
 
 function TimeInput({id,placeHolder,value,cls}) {
+    
     return (
         <>
         <input 
