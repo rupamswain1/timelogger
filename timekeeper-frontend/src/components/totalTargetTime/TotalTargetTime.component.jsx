@@ -13,6 +13,7 @@ const TotalTargetTime=()=>{
     const {key,totalTime}=useSelector(state=>state.TotalTimeReducer);
     const {taskList}=useSelector(state=>state.TaskReducer);
     const [timeState,setTimeState]=useState([]);
+    
     //console.log(timeState)
     let timeArr=[]
     //console.log(timeArr)
@@ -28,7 +29,7 @@ const TotalTargetTime=()=>{
                 
             }
             //console.log(timeState)
-        }, 1000);
+        }, 100000);
         return () => clearInterval(interval);
       }, [timeState.length]);
     //console.log(timeArr)
@@ -142,8 +143,9 @@ const TotalTargetTime=()=>{
             placeholder:'S',
         },
     ]
+    
     return(
-        <TimeCard onChange={handleChange} onFocus={clearTxt} onKeyDown={handleDelete} timeState={timeState} timeBoxes={timeBoxes} cls={cls} displayCondition={displayCondition} timeArr={timeArr} totalTime={totalTime} key={key} submitTime={submitTime}/>
+        <TimeCard onChange={handleChange} onFocus={clearTxt} onKeyDown={handleDelete} timeState={timeState} timeBoxes={timeBoxes} cls={cls} displayCondition={displayCondition} timeArr={timeArr} totalTime={totalTime} timeKey={key} submitTime={submitTime}/>
         // <div className='timcardsContainer' onChange={handleChange} onFocus={clearTxt} onKeyDown={handleDelete}>
         //     {timeState.length>6?<span className='timeBoxNegative'>-</span>:''}
         //     {timeBoxes.map((box)=>(

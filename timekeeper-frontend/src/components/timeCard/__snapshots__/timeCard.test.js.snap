@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`validate the timecard component when negative time data is provided in timeState will test the snapshot 1`] = `ReactWrapper {}`;
+
+exports[`validate the timecard component when no time data is provided will test the snapshot 1`] = `ReactWrapper {}`;
+
+exports[`validate the timecard component when time data is provided ime timeState will test the snapshot 1`] = `ReactWrapper {}`;
+
+exports[`validate the timecard component when time data is provided in timeArr will test the snapshot 1`] = `ReactWrapper {}`;
