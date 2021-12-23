@@ -1,27 +1,27 @@
 {
   "files": {
     "main.css": "/timelogger/static/css/main.41fb6482.chunk.css",
-    "main.js": "/timelogger/static/js/main.f45c77de.chunk.js",
-    "main.js.map": "/timelogger/static/js/main.f45c77de.chunk.js.map",
-    "runtime-main.js": "/timelogger/static/js/runtime-main.b4bba0c5.js",
-    "runtime-main.js.map": "/timelogger/static/js/runtime-main.b4bba0c5.js.map",
+    "main.js": "/timelogger/static/js/main.ca1f154d.chunk.js",
+    "main.js.map": "/timelogger/static/js/main.ca1f154d.chunk.js.map",
+    "runtime-main.js": "/timelogger/static/js/runtime-main.be6a9263.js",
+    "runtime-main.js.map": "/timelogger/static/js/runtime-main.be6a9263.js.map",
     "static/css/2.61061fbe.chunk.css": "/timelogger/static/css/2.61061fbe.chunk.css",
-    "static/js/2.ea527779.chunk.js": "/timelogger/static/js/2.ea527779.chunk.js",
-    "static/js/2.ea527779.chunk.js.map": "/timelogger/static/js/2.ea527779.chunk.js.map",
-    "static/js/3.4569c7d2.chunk.js": "/timelogger/static/js/3.4569c7d2.chunk.js",
-    "static/js/3.4569c7d2.chunk.js.map": "/timelogger/static/js/3.4569c7d2.chunk.js.map",
+    "static/js/2.fbfab578.chunk.js": "/timelogger/static/js/2.fbfab578.chunk.js",
+    "static/js/2.fbfab578.chunk.js.map": "/timelogger/static/js/2.fbfab578.chunk.js.map",
+    "static/js/3.4f070355.chunk.js": "/timelogger/static/js/3.4f070355.chunk.js",
+    "static/js/3.4f070355.chunk.js.map": "/timelogger/static/js/3.4f070355.chunk.js.map",
     "index.html": "/timelogger/index.html",
-    "precache-manifest.aaf5f9b0abf013bf3006de422ddf8c3a.js": "/timelogger/precache-manifest.aaf5f9b0abf013bf3006de422ddf8c3a.js",
+    "precache-manifest.dc1b2db05fec0e26283660468b7c0638.js": "/timelogger/precache-manifest.dc1b2db05fec0e26283660468b7c0638.js",
     "service-worker.js": "/timelogger/service-worker.js",
     "static/css/2.61061fbe.chunk.css.map": "/timelogger/static/css/2.61061fbe.chunk.css.map",
     "static/css/main.41fb6482.chunk.css.map": "/timelogger/static/css/main.41fb6482.chunk.css.map",
-    "static/js/2.ea527779.chunk.js.LICENSE.txt": "/timelogger/static/js/2.ea527779.chunk.js.LICENSE.txt"
+    "static/js/2.fbfab578.chunk.js.LICENSE.txt": "/timelogger/static/js/2.fbfab578.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.b4bba0c5.js",
+    "static/js/runtime-main.be6a9263.js",
     "static/css/2.61061fbe.chunk.css",
-    "static/js/2.ea527779.chunk.js",
+    "static/js/2.fbfab578.chunk.js",
     "static/css/main.41fb6482.chunk.css",
-    "static/js/main.f45c77de.chunk.js"
+    "static/js/main.ca1f154d.chunk.js"
   ]
 }
