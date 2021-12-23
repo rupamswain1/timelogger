@@ -29,7 +29,7 @@ const TotalTargetTime=()=>{
                 
             }
             //console.log(timeState)
-        }, 100000);
+        }, 1000);
         return () => clearInterval(interval);
       }, [timeState.length]);
     //console.log(timeArr)
@@ -110,11 +110,6 @@ const TotalTargetTime=()=>{
                     document.getElementById(parseInt(event.target.name)-1).value='';
                     
                 }
-
-                // else{
-                //     document.getElementById(parseInt(event.target.name)).blur();
-                //     document.getElementById(parseInt(event.target.name)).disabled=true;
-                //}
         }
     }
     const timeBoxes=[

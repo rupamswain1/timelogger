@@ -13,7 +13,6 @@ const INITIAL_STATE={
     releaseAll:{isActive:true,time:0,color:'rgb(48, 1, 1)'},
     miscelaneous:{isActive:false,time:0,color:'rgb(115, 20, 223)'},
     currentActive:'releaseAll',
-    
 }
 
 
@@ -50,8 +49,6 @@ export const BreakButtonReducer=(state=INITIAL_STATE,action)=>{
             }
         case BreakButtonType.GET_BREAK_COLOR:
             let color=state[action.breakName].color;
-            //console.log(color)
-            //console.log(state[action.breakName])
             return color;
         default:
             return state;

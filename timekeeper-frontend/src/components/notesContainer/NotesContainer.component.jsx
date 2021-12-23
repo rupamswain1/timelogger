@@ -17,7 +17,6 @@ const NotesContainer=()=>{
         }
     }
     return(
-
         <div className={`notesContanerMain ${noteDisplay?'notesContanerMain__expand':'notesContanerMain__shrink'}`}>
             <form onSubmit={handleSubmit} className={`notesInput ${noteDisplay?'notesInput__expand':'notesInput__shrink'}`}>
                 <input value={noteEntered} type='text' placeholder='Add Note' className='noteInputs' onChange={e=>setNoteEntered(e.target.value)}></input>
@@ -31,12 +30,8 @@ const NotesContainer=()=>{
                     }    
                     )
                 }          
-               
-               
             </div>
-        </div>
-        
+        </div>       
     )
 }
-
 export default NotesContainer;

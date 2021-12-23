@@ -6,20 +6,21 @@ import {createStore,combineReducers} from 'redux';
 import Enzyme from 'enzyme';
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 import jest from 'jest-mock'
-
+import {TotalTimeReducer} from '../../redux/totalTime/TotalTime.reducer'
+import {TaskReducer} from '../../redux/task/Task.reducer'
+//'./totalTime/TotalTime.reducer';
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('test functions of totalTargetTime',()=>{
     let wrapper;
     let store;
     function createTestStore() {
-        const store = createStore(
+         return createStore(
           combineReducers({
-            user: userReducer,
-            config: configReducer,
+            TotalTimeReducer:TotalTimeReducer,
+            TaskReducer:TaskReducer,
           })
         );
-        return store;
       }
     beforeEach(()=>{
         store=createTestStore();
@@ -28,6 +29,6 @@ describe('test functions of totalTargetTime',()=>{
                     </Provider>)
     })
     it('is a demo test',()=>{
-        console.log(wrapper.child().dive());
+        
     })
 })
