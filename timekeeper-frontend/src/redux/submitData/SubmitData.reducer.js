@@ -35,6 +35,8 @@ export const SubmitDataReducer=(state=INITIAL_STATE,action)=>{
                 key:state.key,
                 data:{...state.data}
             }
+        case SubmitDataType.Delete_ALL_DATA:
+            return {...INITIAL_STATE};
         default:
             return state;
     }

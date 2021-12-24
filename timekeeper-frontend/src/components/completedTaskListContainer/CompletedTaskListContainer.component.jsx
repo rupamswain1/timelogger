@@ -19,7 +19,6 @@ const CompletedTaskListContainer=()=>{
                     taskList[key].isCompleted?
                     (<AddedTask key={key} type={taskList[key].type} completed={taskList[key].isCompleted} bgColor={taskList[key].color} taskName={key} paused={taskList[key].paused} percentage={taskList[key].percentage} time={SecondsToArray(taskList[key].time)}/>)
                     :''
-                    
                     )
                 }    
                 )

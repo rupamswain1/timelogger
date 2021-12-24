@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import {useDispatch} from 'react-redux';
 import TotalTargetTime from '../../components/totalTargetTime/TotalTargetTime.component';
 import BreakButtons from '../../components/breakButtons/BreakButtons.component';
@@ -19,8 +19,11 @@ import {removeAllTask} from '../../redux/task/Task.action';
 import {removeAllTime} from '../../redux/totalTime/TotalTime.action';
 import {toggleNoteDisplay} from '../../redux/notes/notes.action';
 import Header from '../../components/header/Header.component'
+import ClearAllButton from '../../components/clearAllButton/ClearAllButton.component';
+import ConfirmCancelPage from '../confirmCancelPage/ConfirmCancelPage.component';
 import './HomePage.style.scss'
 const HomePage=()=>{
+    
     const dispatch=useDispatch();
     const reset=()=>{
         dispatch(removeAllTask());
@@ -76,7 +79,8 @@ const HomePage=()=>{
                 </div>
                 
             </div>
-            
+           <ClearAllButton/>
+           <ConfirmCancelPage/>
         </div>
     )
 }

@@ -1,0 +1,16 @@
+.confirmationDialog{
+    height: 40vh;
+    width: 40vw;
+    background-color: white;
+    border-radius: 5px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    &__headingContainer{
+        align-conte: center;
+    }
+}

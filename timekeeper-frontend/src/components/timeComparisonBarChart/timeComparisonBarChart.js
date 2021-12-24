@@ -12,8 +12,6 @@ const TimeComparisonBarChart=()=>{
       let taskHour=[];
       let bgColors=[]
       let borderColors=[]
-      //console.log(data[key]);
-      //console.log(Object.keys(data[key]).length)
       if(Object.keys(data).length>0){
       let obj=data[key].taskData;
       //console.log(obj)

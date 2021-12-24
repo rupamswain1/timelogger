@@ -1,7 +1,9 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 
 function TimeInput({id,placeHolder,value,cls}) {
-    
+    useEffect(()=>{
+        
+    },[value])
     return (
         <>
         <input 
