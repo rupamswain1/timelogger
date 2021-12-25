@@ -38,7 +38,7 @@ const DoughnutChart=()=>{
               backgroundColor: bgColors,
               borderColor: borderColors,
               borderWidth: 2,
-              hoverOffset: 20,
+              hoverOffset: 20, 
             },
           ],
       };
