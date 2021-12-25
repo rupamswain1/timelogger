@@ -18,9 +18,10 @@ import AddIcon from '@material-ui/icons/Add';
 import {removeAllTask} from '../../redux/task/Task.action';
 import {removeAllTime} from '../../redux/totalTime/TotalTime.action';
 import {toggleNoteDisplay} from '../../redux/notes/notes.action';
+import {clearSubmittedData} from '../../redux/submitData/SubmitData.action';
 import Header from '../../components/header/Header.component'
 import ClearAllButton from '../../components/clearAllButton/ClearAllButton.component';
-import ConfirmCancelPage from '../confirmCancelPage/ConfirmCancelPage.component';
+
 import './HomePage.style.scss'
 const HomePage=()=>{
     
@@ -32,6 +33,11 @@ const HomePage=()=>{
             window.location.reload(false);
     
         }, 500);
+    }
+    const clearAllAction=(event)=>{
+        if(event.target.innerHTML=='Confirm'){
+            dispatch(clearSubmittedData())
+        }
     }
     return(
 
@@ -79,8 +85,9 @@ const HomePage=()=>{
                 </div>
                 
             </div>
-           <ClearAllButton/>
-           <ConfirmCancelPage/>
+            <div className='clearButtonContainer' onClick={clearAllAction}>
+                <ClearAllButton/>
+            </div>
         </div>
     )
 }

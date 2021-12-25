@@ -3,9 +3,9 @@ import Button from '@material-ui/core/Button';
 
 import './ConfirmationDialog.style.scss'
 
-const ConfirmationDialog=({heading,content})=>{
+const ConfirmationDialog=({onCancelClick,heading,content})=>{
     return (
-        <div className='confirmationDialog'>
+        <div className='confirmationDialog' onClick={onCancelClick}>
             <div className='confirmationDialog__headingContainer'>
                 <h2 className='confirmationDialog__heading'>
                     {heading}
@@ -15,8 +15,8 @@ const ConfirmationDialog=({heading,content})=>{
                 {content}
             </div>
             <div className='confirmationDialog__buttonContainer'>
-                <Button variant="contained" color='secondary' className='clearButton'>Cancel</Button>
-                <Button variant="contained" color='primary' className='clearButton'>Confirm</Button>
+                <Button variant="contained" color='secondary' className='clearButton' >Cancel</Button>
+                <Button variant="contained" color='primary' className='clearButton' name='confirmAction' id='confirmAction'>Confirm</Button>
             </div>
         </div>
     )

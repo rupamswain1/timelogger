@@ -71,20 +71,17 @@
         padding-bottom: 5%;
         .chartConatiner1{
             display: flex;
-            position: relative;
         }
         .chartContainer2{
             display: flex;
-            position: absolute;
             //height: 100%;
             width: 100%;
         }
         .chartHeader{
             font-weight: bold;
             font-size: 150%;
-            position: relative;
             left: 45%;
         }
     }
-
+    
 }

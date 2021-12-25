@@ -14,3 +14,8 @@ export const submitDataInProgerss=(taskReducer,breakButtonReducer,totalTimeReduc
         totalTimeReducer:totalTimeReducer
     }
 }
+export const clearSubmittedData=()=>{
+    return{
+        type:SubmitDataType.Delete_ALL_DATA,
+    }
+}

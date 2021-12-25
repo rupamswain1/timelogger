@@ -1,6 +1,7 @@
 const SubmitDataType={
     SUBMIT_ALL_DATA_START:'SUBMIT_ALL_DATA_START',
     SUBMIT_ALL_DATA_INPROGRESS:'SUBMIT_ALL_DATA_INPROGRESS',
+    Delete_ALL_DATA:'Delete_ALL_DATA'
 }
 
 export default SubmitDataType;

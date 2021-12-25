@@ -1,6 +1,6 @@
 .confirmationDialog{
-    height: 40vh;
-    width: 40vw;
+    height: 35vh;
+    width: 35vw;
     background-color: white;
     border-radius: 5px;
     left: 50%;
@@ -9,8 +9,29 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    align-content: center;
+    align-items: center;
+    //justify-content: stretch;
+    align-content: stretch;
     &__headingContainer{
-        align-conte: center;
+        text-decoration: underline;
+    }
+    &__contentContainer{
+        padding: 1rem;
+        text-align: center;
+        flex-grow: 1;
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    &__buttonContainer{
+        width:inherit;
+        flex-grow: 2;
+        display: flex;
+        position: relative;
+        //flex-direction: row;
+        justify-content: space-around;
+       
+        padding-top:1rem;
+        align-items: center;
     }
 }
